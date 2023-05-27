@@ -72,13 +72,22 @@ const opcionesDia = {
     4: "26 de mayo"
 };
 
+document.getElementById("btnPedirTurno").addEventListener("click",function(){
+    let turno1= pedirTurno();
+    console.log(turno1);
+})
 
 function pedirTurno() {
     let nombreApellido = prompt("Nombre y apellido");
     let obraSocial = prompt("Indique su obra social o si es particular.");
     let tratamiento = prompt("1- Ortodoncia\n2- Estética dental\n3- Extracciones\n4- Consulta ");
     let dia = prompt("Días disponibles de esta semana\n1- 23 de mayo\n2- 24 de mayo\n3- 25 de mayo\n4- 26 de mayo");
-    let hora = prompt(`Horarios disponibles para la fecha ${opcionesDia[dia]}\n${horariosDisponibles[dia].join("\n")}`);
+    let hora = "";
+    if(dia in horariosDisponibles){
+        hora= prompt(`Horarios disponibles para la fecha ${opcionesDia[dia]}\n${horariosDisponibles[dia].join("\n")}`);
+    } else {
+        alert("Día no válido, por favor, inténtalo nuevamente.")
+    }
     
     return {
         nombreApellido,
@@ -88,7 +97,3 @@ function pedirTurno() {
         hora
     };
 }
-
-let turno1 = pedirTurno();
-
-console.log(turno1);
