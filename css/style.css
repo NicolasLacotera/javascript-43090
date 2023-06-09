@@ -1,0 +1,25 @@
+.texto-tratamiento{
+    display: none;
+}
+
+.primer-dia{
+    grid-column-start: 3;
+}
+
+.fondo-turnos{
+    background-image: url(../Img/fondo\ turnos.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+.form-turno {
+    opacity: 0.90;
+}
+
+.horarios-turnos{
+    display: none;
+}

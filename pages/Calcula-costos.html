@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../Img/logo pestaña.png">
     <title>Consultorio web muelitas</title>
 </head>
 
-<body >
+<body>
 
     <!--NAVBAR-->
     <nav class="navbar bg-primary navbar-expand-lg " data-bs-theme="dark">
@@ -24,43 +25,83 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Tratamientos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link " aria-current="page" href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Calcula costos</a>
+                        <a class="nav-link" href="Turnos.html">Turnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Calcula costos</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <input class="form-control me-2 bg-light" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-light bg-primary" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
     </nav>
+    <!--FORM CALCULA COSTOS-->
 
-<div class="text-center">
-<a href="./Regalo-muelitas.html"><img src="../Img/premiomuelitas.png" class="img-fluid text-center mt-5" alt=""></a>
-<h4 class="mt-3">Carga tus datos y gana! Click en la imagen</h4>
-</div>
-<div class="container-fluid bg-primary justify-content-center text-center mt-4 mb-2 ">
-    <button class="btn btn-primary " type="submit" id="btnPedirTurno"> <b>Pedir turno</b> </button>
+    <div class="text-center">
+        <h3 class="text-secondary mt-5">¿cuál es el tratamiento de tu interés?</h3>
+        <select name="" id="tratamientos" class="mt-5 mb-5 container text-center border border-primary shadow rounded">
+            <option disabled selected value=""></option>
+            <option value="opcionConsulta">Consulta</option>
+            <option value="opcionEstetica">Estetica dental</option>
+            <option value="opcionExtraccion">Extracciones</option>
+            <option value="opcionOrtodoncia">Ortodoncia</option>
+        </select>
+        <div class="texto-tratamiento" id="costoConsulta">
+            <h4 class="mt-3">El costo de este tratamiento es de:</h4>
+            <h4>$2.000</h4>
+        </div>
+        <div class="texto-tratamiento" id="costoEstetica">
+            <h4 class="mt-3">El costo de este tratamiento es de:</h4>
+            <h4>$15.000</h4>
+        </div>
+        <div class="texto-tratamiento" id="costoExtraccion">
+            <h4 class="mt-3">El costo de este tratamiento es de:</h4>
+            <h4>$5.00</h4>
+        </div>
+        <div class="texto-tratamiento" id="costoOrtodoncia">
+            <h4 class="mt-3">El costo de este tratamiento es de:</h4>
+            <h4>$50.000</h4>
+        </div>
+        <div class="mt-5 mb-4 ">
+            <button class="btn btn-primary " type="submit" id="btnPedirTurno"> <b>Pedir turno</b> </button>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row justify-content-between  text-center text-secondary mt-5 ">
+        <hr>
+        <h4 class="mb-5">Medios de pago</h4>
+
+
+        <div class="card shadow col-xs-12 col-md-6 " style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Efectivo</h5>
+                <img src="../Img/Efectivo.png" alt="imgEfectivo">
+            </div>
+        </div>
+
+        <div class="card shadow col-xs-12 col-md-6 " style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Transferencia bancaria</h5>
+                <img src="../Img/Transferencia.png" alt="imgTransferencia">
+            </div>
+        </div>
+
+        <div class="card shadow col-xs-12 col-md-6 " style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Tarjeta de credito</h5>
+                <img src="../Img/Tarjeta de credito.png" alt="imgTarjeta">
+            </div>
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/mai.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
