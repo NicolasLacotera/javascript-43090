@@ -40,7 +40,7 @@ do {
             alert("Opción no válida, por favor, inténtalo nuevamente.");
             break;
     }
-} while (consulta !== "1" && consulta !== "2" && consulta !== "3" && consulta != "4");*/
+} while (consulta !== "1" && consulta !== "2" && consulta !== "3" && consulta != "4");
 
 const turnosPacientes = {
     nombreCompleto: "",
@@ -96,7 +96,7 @@ function pedirTurno() {
         dia: opcionesDia[dia],
         hora
     };
-}
+}*/
 
 
 document.getElementById("tratamientos").addEventListener("change", function () {
@@ -133,3 +133,7 @@ function mostrarCosto(costoId) {
     let costo = document.getElementById(costoId);
     costo.style.display = "block";
 }
+
+document.getElementById("btnPedirTurno").addEventListener("click", function () {
+    window.location.href = "./Turnos.html"; 
+});
